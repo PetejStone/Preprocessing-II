@@ -5,6 +5,8 @@
   color: @color;
 }
 
+@desktop: ~"(min-width: 800px)";
+
 .flexy(
   @disp: flex,
   @dir: null,
@@ -26,8 +28,19 @@
   height: @height;
   border-radius: 15px;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 .center() {
   margin: 0 auto;
+}
+
+.pulse() {
+  @keyframes pulse {
+    0%   {transform: scale(1);}
+    25%  {transform: scale(1.1);}
+    50%  {transform: scale(1.2);}
+    75%  {transform: scale(1.1);}
+    100% {transform: scale(1);}
+  }
 }
