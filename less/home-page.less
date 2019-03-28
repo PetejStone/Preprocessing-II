@@ -15,33 +15,39 @@ header {
 .home {
   border-top: 2px dashed gray;
   margin-top: 1rem;
+  .flexy(flex, column, null, center, center);
   .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 2px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
 
 
 
     .text-content {
-      width: 48%;
-      padding-right: 1%;
+      width: 100%;
+      // width: 48%;
+      // padding-right: 1%;
     }
 
     .img-content {
-      width: 48%;
-      padding-left: 1%;
+      width: 100%;
+      // width: 48%;
+      // padding-left: 1%;
 
       img {
         border-radius: 10px;
+        width: 100%;
       }
     }
   }
 
   .inverse-content {
+    margin-top: 24px;
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    .flexy(flex, column-reverse, null, center, center);
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -54,8 +60,12 @@ header {
   }
 
   .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    border-bottom: 2px dashed gray;
+    // width: 75%;
+    // margin: 0 auto 30px;
 
     img {
       border-radius: 10px;
@@ -63,14 +73,28 @@ header {
   }
 
   .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    .flexy(flex, column, null, center, center);
+    padding: 3rem;
+    width: 92%;
+    // padding-top: 30px;
+    // border-top: 2px dashed @navigation-border;
+    // display: flex;
+    // justify-content: space-between;
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      width: 100%;
+
+      // width: 30%;
+      // margin-bottom: 30px;
     }
   }
 }// home
+
+.destination {
+  margin-bottom: 35px;
+  .btn {
+    .flexy(flex, row, null, center, center);
+    .btn-styles(#16A2B8, #fff, 100%, 4rem);
+    .center();
+  }
+}
