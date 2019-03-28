@@ -1,1 +1,20 @@
 // Mixins in here
+.link-reset(@color) {
+  text-decoration: none;
+  list-style-type: none;
+  color: @color;
+}
+
+.flexy(
+  @disp: flex,
+  @dir: null,
+  @wrap: null,
+  @just: null,
+	@ai: null) {
+  display: @disp;
+  flex-direction: @dir;
+  flex-wrap: @wrap;
+  justify-content: @just;
+	align-items: @ai;
+
+}
