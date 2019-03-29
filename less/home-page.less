@@ -141,8 +141,8 @@ header {
     .center();
     &:hover {
       .pulse();
-      animation-name: pulse;
-      animation-duration: .2s;
+      // animation-name: pulse;
+      // animation-duration: .2s;
     }
     @media @desktop {
       .btn-styles(#16A2B8, #fff, 100%, 3rem);
@@ -158,26 +158,4 @@ header {
   h2 {
     .center();
   }
-}
-.contact-form {
-.flexy(flex, column, null, center, left);
-  width: 900px;
-  max-width: 100%;
-  padding: 2em 1em 0px 1em;
-  & input,
-  & select,
-  & textarea {
-    margin: 5px 0px;
-  }
-  input {
-    height: 5rem;
-    font-size: 1.6rem;
-  }
-  label {
-    font-size: 1.6rem;
-  }
-}
-
-textarea {
-  font-size: 14px;
 }

@@ -131,6 +131,7 @@ table {
 }
 html {
   font-size: 62.5%;
+  height: 100vh;
 }
 html,
 body {
@@ -232,6 +233,7 @@ nav a {
   border-top: 2px dashed silver;
   background: #FFEBCD;
   left: 0;
+  margin-top: 1rem;
 }
 @media (min-width: 800px) {
   .footer {
@@ -429,13 +431,13 @@ header img {
     transform: scale(1);
   }
   25% {
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.05);
   }
   75% {
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
   100% {
     transform: scale(1);
@@ -459,6 +461,9 @@ header img {
 .contact h2 {
   margin: 0 auto;
 }
+.contact {
+  width: 100%;
+}
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -480,6 +485,35 @@ header img {
 }
 .contact-form label {
   font-size: 1.6rem;
+}
+.contact-form input[type='submit'] {
+  height: 4rem;
+  color: #fff;
+  background-color: #69D36E;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contact-form input[type='submit']:hover {
+  animation-name: pulse;
+  animation-duration: 0.2s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.01);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 textarea {
   font-size: 14px;
