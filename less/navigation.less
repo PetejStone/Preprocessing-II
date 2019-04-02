@@ -1,1 +1,33 @@
 // Navigation Styles here
+.navigation {
+  .flexy(flex, column, null, space-between, center);
+  height: 6rem;
+  @media @desktop {
+    .flexy(flex, row, null, space-between, center);
+    height: 4rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+nav {
+  width: 100%;
+  .flexy(flex, row, null, space-around, center);
+  @media @desktop {
+    width: 44%;
+  }
+  a {
+    .link-reset(#000);
+    font-size: 1.6rem;
+    @media @desktop {
+      font-size: 1.4rem;
+    }
+    }
+  }
+
+
+
+.chromeperfectpixel-overlay {
+  width: 800px !important;
+  height: auto !important;
+}

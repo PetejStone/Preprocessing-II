@@ -1,32 +1,89 @@
+// testing a commit ignore this comment
+.content-container {
+  @media @desktop {
+    width: 85%;
+  }
+}
+
+h2 {
+  @media @desktop {
+    font-size: 2.5rem;
+  }
+}
+
+h4 {
+  @media @desktop {
+    font-size: 2rem;
+  }
+}
+
+p {
+  @media @desktop {
+    font-size: 1.3rem;
+  }
+
+}
+header {
+  padding-top: 1rem;
+  .border {
+    border-top: 2px dashed gray;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+  }
+
+  img {
+    margin-bottom: 1.7rem;
+  }
+}
+
 .home {
-
+  border-top: 2px dashed gray;
+  margin-top: 1rem;
+  .flexy(flex, column, null, center, center);
   .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
+    margin-top: 30px;
+    margin-bottom: 2px;
+    @media @desktop {
+      .flexy(flex, row, wrap, space-between, flex-start);
+      margin-top: 19px;
+    }
     .text-content {
-      width: 48%;
-      padding-right: 1%;
+      width: 100%;
+      @media @desktop {
+        width: 49%;
+        padding-right: 1%;
+      }
     }
 
     .img-content {
-      width: 48%;
-      padding-left: 1%;
+      width: 100%;
+
+      @media @desktop {
+        width: 48%;
+        padding-left: 1%;
+      }
 
       img {
         border-radius: 10px;
+        width: 100%;
+        display: inline-block;
+        @media @desktop {
+          width: 100%;
+        }
       }
     }
   }
 
   .inverse-content {
+    margin-top: 24px;
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    .flexy(flex, column-reverse, null, center, center);
+    @media @desktop {
+      .flexy(flex, row, wrap, space-between, flex-start);
+      margin-top: 19px;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -39,8 +96,12 @@
   }
 
   .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    @media @desktop {
+      width: 75%;
+    }
 
     img {
       border-radius: 10px;
@@ -48,14 +109,53 @@
   }
 
   .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
+    .flexy(flex, column, null, center, center);
+    padding: 3rem;
+    width: 92%;
+    border-top: 2px dashed gray;
+    @media @desktop {
+      width: 100%;
+      padding: 2rem 0;
+      .flexy(flex, row, null, space-between, center);
+    }
+    // padding-top: 30px;
+    // border-top: 2px dashed @navigation-border;
+    // display: flex;
+    // justify-content: space-between;
 
     .destination {
-      width: 30%;
-      margin-bottom: 30px;
+      width: 100%;
+      @media @desktop {
+        width: 30%;
+      }
+
+
     }
   }
-}// home
+}
+.destination {
+  margin-bottom: 35px;
+  .btn {
+    .flexy(flex, row, null, center, center);
+    .btn-styles(#16A2B8, #fff, 100%, 4rem);
+    .center();
+    &:hover {
+      .pulse();
+      // animation-name: pulse;
+      // animation-duration: .2s;
+    }
+    @media @desktop {
+      .btn-styles(#16A2B8, #fff, 100%, 3rem);
+      border-radius: 8px;
+      font-size: 1.6rem;
+      width: 82%;
+      float: left;
+    }
+  }
+}
+
+.contact {
+  h2 {
+    .center();
+  }
+}
